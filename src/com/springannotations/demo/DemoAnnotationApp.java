@@ -14,6 +14,10 @@ public class DemoAnnotationApp {
 		
 		System.out.println(tennisCoach.getDailyFortune());
 		
+		System.out.println(tennisCoach.getEmailAddress());
+		
+		System.out.println(tennisCoach.getTeam());
+		
 		context.close();
 		
 	}

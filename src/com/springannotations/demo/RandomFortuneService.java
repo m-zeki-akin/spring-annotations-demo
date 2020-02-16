@@ -13,7 +13,7 @@ public class RandomFortuneService implements FortuneService {
 	
 	@Override
 	public String getFortune() {
-		return arr[rand.nextInt(3)];
+		return arr[rand.nextInt(arr.length)];
 	}
 
 }
