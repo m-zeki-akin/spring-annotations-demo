@@ -9,18 +9,22 @@ public class DemoAnnotationApp {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("sport-context.xml");
 		
 		TennisCoach tennisCoach = context.getBean("tennisCoach", TennisCoach.class);
-		
-		TennisCoach newTennisCoach = context.getBean("tennisCoach", TennisCoach.class);
 
-		System.out.println(tennisCoach);
+		System.out.println(tennisCoach.getDailyWorkout());
 		
 		System.out.println(tennisCoach.getDailyFortune());
 		
-		System.out.println(newTennisCoach);
+		System.out.println(tennisCoach.getEmailAddress());
 		
-		System.out.println(newTennisCoach.getDailyFortune());
+		System.out.println(tennisCoach.getTeam());
+		
+		tennisCoach.destroyTennisCoach();
+		
+		System.out.println("Context still open but Tennis Coach destroyed.");
 		
 		context.close();
+		
+		System.out.println("Context closed");
 		
 	}
 

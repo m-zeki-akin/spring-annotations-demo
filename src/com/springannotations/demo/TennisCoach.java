@@ -1,5 +1,8 @@
 package com.springannotations.demo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,6 +16,16 @@ public class TennisCoach implements ICoach {
 	@Autowired
 	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
+	
+	@PostConstruct
+	public void initTennisCoach() {
+		System.out.println("Tennis Coach Initialized");
+	}
+	
+	@PreDestroy
+	public void destroyTennisCoach() {
+		System.out.println("Tennis Coach Destroyed");
+	}
 	
 	@Value("${TennisCoach.emailAddress}")
 	private String emailAddress;
