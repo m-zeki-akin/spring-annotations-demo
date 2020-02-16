@@ -10,19 +10,23 @@
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- Component scanning -->
-	<context:component-scan base-package="com.springannotation.demo"/>
-	
+	<context:component-scan
+		base-package="com.springannotation.demo" />
+
 	<!-- Load properties -->
 
 	<!-- Defines are here! -->
 
+	<bean
+		id="TennisCoachComponent"
+		class="com.springannotations.demo.TennisCoach">
 
-	<!-- Fortune -->
-	
+	</bean>
+
 
 	<bean
 		id="LoggerConfig"
-		class="com.springdemo.demo.LoggerConfig"
+		class="com.springannotations.demo.LoggerConfig"
 		init-method="initLogger">
 		<property
 			name="rootLoggerLevel"
