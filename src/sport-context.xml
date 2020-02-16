@@ -11,18 +11,11 @@
 
 	<!-- Component scanning -->
 	<context:component-scan
-		base-package="com.springannotation.demo" />
+		base-package="com.springannotations.demo" />
 
 	<!-- Load properties -->
 
 	<!-- Defines are here! -->
-
-	<bean
-		id="TennisCoachComponent"
-		class="com.springannotations.demo.TennisCoach">
-
-	</bean>
-
 
 	<bean
 		id="LoggerConfig"
