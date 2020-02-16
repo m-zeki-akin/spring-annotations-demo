@@ -18,13 +18,7 @@ public class DemoAnnotationApp {
 		
 		System.out.println(tennisCoach.getTeam());
 		
-		tennisCoach.destroyTennisCoach();
-		
-		System.out.println("Context still open but Tennis Coach destroyed.");
-		
 		context.close();
-		
-		System.out.println("Context closed");
 		
 	}
 
