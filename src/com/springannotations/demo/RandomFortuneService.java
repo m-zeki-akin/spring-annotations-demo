@@ -8,8 +8,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Random;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,7 +16,6 @@ public class RandomFortuneService implements FortuneService {
 	// Read Fortune Services from fortune-services
 	// Add Fortune Services to array
 	// Return the random Fortune Service from Fortune Services array
-	@PostConstruct
 	@Override
 	public String getFortune() {
 		try {
@@ -41,7 +38,6 @@ public class RandomFortuneService implements FortuneService {
 				temp = br.readLine();
 				if (!temp.isEmpty()) {
 					arr.add(temp);
-					System.out.println(temp);
 				}
 			}
 			
